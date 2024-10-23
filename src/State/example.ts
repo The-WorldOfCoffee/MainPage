@@ -9,7 +9,7 @@ const initialState: CounterState = {
   value: 0,
 };
 
-//! I have no idea why this is not working 
+//! I have no idea why this is not working
 export const counterSlice: any = createSlice({
   name: "counter",
   // `createSlice` will infer the state type from the `initialState` argument

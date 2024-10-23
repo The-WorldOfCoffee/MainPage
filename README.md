@@ -12,4 +12,3 @@ This project features:
 - A platform for users to share their coffee experiences and connect with others
 
 Join us in exploring the rich and diverse world of coffee!
-
