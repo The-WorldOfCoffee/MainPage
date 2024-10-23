@@ -1,3 +1,5 @@
+const { off } = require("process");
+
 module.exports = {
   root: true,
   env: { browser: true, es2020: true },
@@ -23,6 +25,15 @@ module.exports = {
     },
   ],
   rules: {
+    "no-restricted-imports": "off",
+    "@typescript-eslint/no-restricted-imports": [
+      "warn",
+      {
+        "name": "react-redux",
+        "importNames": ["useSelector", "useDispatch"],
+        "message": "Use typed hooks `useAppDispatch` and `useAppSelector` instead."
+      }
+    ],
     "react-refresh/only-export-components": ["warn", { allowConstantExport: true }],
     "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/no-unused-vars": [

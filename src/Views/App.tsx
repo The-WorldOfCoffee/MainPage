@@ -15,7 +15,7 @@ const App: React.FC = () => {
           <Route path="*" element={<NotFound />} />
           <Route path="/" element={<Navigate to="/main" />} />
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter >
     </CoffeeProvider>
   );
 };
