@@ -1,6 +1,6 @@
+import { ArrowBackIcon, ArrowForwardIcon } from "@chakra-ui/icons";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { ArrowForwardIcon, ArrowBackIcon } from "@chakra-ui/icons";
 
 interface CoffeeBean {
   id: number;
