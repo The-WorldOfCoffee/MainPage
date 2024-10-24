@@ -19,7 +19,7 @@ function Home() {
         <HomeIntro />
         <Discover />
         <VersusCoffee />
-        <AdSection/>
+        <AdSection />
         <AboutBeans />
       </div>
       <Footer />

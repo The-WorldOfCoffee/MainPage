@@ -6,11 +6,15 @@ import "@public/font/font.css";
 import { ChakraProvider } from "@chakra-ui/react";
 import "./i18";
 import theme from "../chakra.config";
+import store from "@/State/Store";
+import { Provider } from "react-redux";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <ChakraProvider theme={theme}>
-      <App />
-    </ChakraProvider>
+    <Provider store={store}>
+      <ChakraProvider theme={theme}>
+        <App />
+      </ChakraProvider>
+    </Provider>
   </React.StrictMode>,
 );
