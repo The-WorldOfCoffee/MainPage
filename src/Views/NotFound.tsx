@@ -1,5 +1,7 @@
 import { useTranslation } from "react-i18next";
+import { useNavigate, useNavigation } from "react-router-dom";
 function Notfound() {
+  
   const { t } = useTranslation();
   return (
     <div className="w-screen flex h-screen bg-late-white justify-center items-center">
@@ -9,7 +11,7 @@ function Notfound() {
             <h1 className="text-9xl playfair sm:text-5xl">{t("404_header")}</h1>
             <span className="playfair text-3xl">{t("404_disc")}</span>
           </div>
-          <button className="motion-reduce:transition-none motion-reduce:hover:transform-none w-1/2 transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110  duration-300 text-lg font-semibold rounded-lg bg-late-white text-white h-12 ">
+          <button   className="motion-reduce:transition-none motion-reduce:hover:transform-none w-1/2 transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110  duration-300 text-lg font-semibold rounded-lg bg-late-white text-white h-12 ">
             {t("404_button_return")}
           </button>
         </div>
