@@ -11,10 +11,8 @@ const AdSection = () => {
         <div className="flex relative z-10 justify-between lg:flex-col w-full">
           <div className="flex flex-1 w-full h-full justify-center items-center flex-col">
             <div className="h-4/6 w-full px-16 gap-2 justify-evenly flex flex-col ">
-              <h2 className="playfair lg:text-3xl text-6xl text-white font-bold">{t('AdSectionTitle')}</h2>
-              <span className="text-white playfair font-normal ">
-                {t('AdSectionDisc')}
-              </span>
+              <h2 className="playfair lg:text-3xl text-6xl text-white font-bold">{t("AdSectionTitle")}</h2>
+              <span className="text-white playfair font-normal ">{t("AdSectionDisc")}</span>
               <div>{navButton("Order Now")}</div>
             </div>
           </div>

@@ -18,7 +18,7 @@ function CoffeeProvider({ children }: InferProps<typeof CoffeeProvider.propTypes
         fetch(`${BASE_URL}/coffees`)
           .then((res) => {
             if (!res.ok) {
-              throw new Error("Network response was not ok"); 
+              throw new Error("Network response was not ok");
             }
             return res.json();
           })
