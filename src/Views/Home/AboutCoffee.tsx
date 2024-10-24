@@ -1,3 +1,4 @@
+import { ArrowBackIcon, ArrowForwardIcon } from "@chakra-ui/icons";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -60,11 +61,11 @@ const AboutCoffee = () => {
       <p className="text-lg text-center my-3">{currentCoffee.description}</p>
 
       <div className="flex justify-between my-8">
-        <button onClick={handleNext} style={{ left: "-3rem" }} className="p-5 rounded-md relative bg-late-white">
-          <img src="../.././public/footer/Vector11.svg" alt="" />
+      <button onClick={handleNext} style={{ left: "-3rem" }} className="p-5 rounded-md relative bg-late-white">
+          <ArrowBackIcon boxSize={6} />
         </button>
         <button onClick={handleBack} style={{ right: "-3rem" }} className="p-5 relative rounded-md bg-late-white">
-          <img src="../.././public/footer/Vector1.svg" alt="" />
+          <ArrowForwardIcon boxSize={6} />
         </button>
       </div>
     </div>

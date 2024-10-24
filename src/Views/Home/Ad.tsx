@@ -1,7 +1,9 @@
 import navButton from "@/Components/Button/navButton";
 import cup from "@public/AdSecion/cup.png";
+import { useTranslation } from "react-i18next";
 
 const AdSection = () => {
+  const { t } = useTranslation();
   return (
     <>
       <div className="w-full AdSection flex  bg-black">
@@ -9,9 +11,9 @@ const AdSection = () => {
         <div className="flex relative z-10 justify-between lg:flex-col w-full">
           <div className="flex flex-1 w-full h-full justify-center items-center flex-col">
             <div className="h-4/6 w-full px-16 gap-2 justify-evenly flex flex-col ">
-              <h2 className="playfair lg:text-3xl text-6xl text-white font-bold">Get a chance to have an Amazing morning</h2>
+              <h2 className="playfair lg:text-3xl text-6xl text-white font-bold">{t('AdSectionTitle')}</h2>
               <span className="text-white playfair font-normal ">
-                We are giving you are one time opportunity to experience a better life with coffee.
+                {t('AdSectionDisc')}
               </span>
               <div>{navButton("Order Now")}</div>
             </div>
