@@ -2,14 +2,11 @@ import "@public/logo/logo.svg";
 import IdMaker from "./Footer_id_maker";
 import { useTranslation } from "react-i18next";
 
-// Just for test the store
-import { useAppSelector, useAppDispatch } from "@/Hooks/hook";
-import { increment, decrement } from "@/State/example";
+
 
 const Footer = () => {
   // just for test
-  const count = useAppSelector((state: any) => state.counter.value);
-  const dispatch = useAppDispatch();
+
 
   const { t } = useTranslation();
   const developers = [
@@ -28,13 +25,7 @@ const Footer = () => {
   ];
   return (
     <>
-      <h1 className="p-4 hover:cursor-pointer" onClick={() => dispatch(increment())}>
-        increment
-      </h1>
-      <h3>{count}</h3>
-      <h2 className="p-4 hover:cursor-pointer" onClick={() => dispatch(decrement())}>
-        decrement
-      </h2>
+      
       <footer className="w-full h-96 bg-coffee-brown lg:h-72">
         <div className="h-full w-full flex px-10 py-6 lg:px-6 lg:py-4 md:px-4   footers">
           <div className="flex gap-5 justify-center md:gap-2">
