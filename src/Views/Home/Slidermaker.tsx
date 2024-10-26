@@ -35,12 +35,12 @@ const Slidermaker = ({ username, thought = "" }: { username: string; thought?: s
   if (error) return <p>Error: {error}</p>;
 
   return (
-    <div className="w-full h-full bg-gray-800 text-white p-5 rounded-md flex flex-col items-center">
+    <div className="w-full h-full bg-coffee-brown text-white p-5 rounded-md flex flex-col items-center">
       {userData && (
         <>
           <img src={userData.avatar_url} alt={`${userData.login}'s profile`} className="w-24 h-24 rounded-full mb-4" />
           <h2 className="text-lg font-bold mb-2">{userData.login}</h2>
-          {thought && <p className="text-sm italic mt-2">{thought}</p>}
+          {thought && <p className="text-md  text-center italic mt-2">{thought}</p>}
         </>
       )}
     </div>
