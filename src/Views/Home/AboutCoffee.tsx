@@ -33,7 +33,7 @@ const AboutCoffee = () => {
     };
 
     fetchData();
-  }, []);
+  }, [BASE_URL]);
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % coffeeData.length);

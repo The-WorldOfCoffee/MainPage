@@ -23,7 +23,7 @@ function Home() {
         <VersusCoffee />
         <AdSection />
         <AboutBeans />
-        <DevsTought/>
+        <DevsTought />
       </div>
       <Footer />
     </div>

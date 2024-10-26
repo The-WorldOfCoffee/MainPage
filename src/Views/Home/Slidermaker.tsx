@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 type UserData = {
   avatar_url: string;
-  login: string; 
+  login: string;
 };
 
 const Slidermaker = ({ username, thought = "" }: { username: string; thought?: string }) => {

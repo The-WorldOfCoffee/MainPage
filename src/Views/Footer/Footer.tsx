@@ -2,11 +2,8 @@ import "@public/logo/logo.svg";
 import IdMaker from "./Footer_id_maker";
 import { useTranslation } from "react-i18next";
 
-
-
 const Footer = () => {
   // just for test
-
 
   const { t } = useTranslation();
   const developers = [
@@ -25,7 +22,6 @@ const Footer = () => {
   ];
   return (
     <>
-      
       <footer className="w-full h-96 bg-coffee-brown lg:h-72">
         <div className="h-full w-full flex px-10 py-6 lg:px-6 lg:py-4 md:px-4   footers">
           <div className="flex gap-5 justify-center md:gap-2">
