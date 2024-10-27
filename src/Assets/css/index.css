@@ -15,7 +15,9 @@
 a {
   padding: 0;
 }
-
+.l{
+  color:#A79277;
+}
 .linav {
   color: chocolate;
 }
@@ -87,4 +89,26 @@ a {
   height: 100%;
   background-color: #603809;
   opacity: 0.8;
+}
+.sidebar_button {
+  transition: all 0.1s ease-in-out; 
+}
+
+.sidebar_button:hover {
+  border-color: #603809;
+  border-width: 1px;
+  border-radius: 3px;
+}
+
+
+
+.sidebar_button:focus {
+  outline: none;
+  border-color: #8b5e34; 
+}
+
+.sidebar_button:focus:not(:hover) {
+  background-color: #d7a86e; /* Restores the background on unfocus */
+  color: #333;
+  border-color: #ddd;
 }

@@ -13,7 +13,7 @@ const AdSection = () => {
             <div className="h-4/6 w-full px-16 gap-2 justify-evenly flex flex-col ">
               <h2 className="playfair lg:text-3xl text-6xl text-white font-bold">{t("AdSectionTitle")}</h2>
               <span className="text-white playfair font-normal ">{t("AdSectionDisc")}</span>
-              <div>{navButton("Order Now")}</div>
+              <div className="z-10">{navButton("Order Now")}</div>
             </div>
           </div>
           <div className="flex coffeecup flex-1 justify-center items-center w-full h-full ">
