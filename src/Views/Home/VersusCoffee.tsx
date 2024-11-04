@@ -3,6 +3,7 @@ import type { Coffee, Different } from "@/types";
 import { Text, Select, Skeleton, useToast, Fade, SlideFade } from "@chakra-ui/react";
 import { useCallback, useEffect, useState } from "react";
 import Template from "@/Views/Coffee's/Template";
+import { animated, useInView } from "@react-spring/web";
 
 const VersusCoffee = () => {
   const { t } = useTranslation();
@@ -104,6 +105,22 @@ const VersusCoffee = () => {
     }
   }, [option1, option2, different, differentResult]);
 
+  const [ref, springs] = useInView(
+    () => ({
+      from: {
+        opacity: 0,
+        x: -350,
+      },
+      to: {
+        opacity: 1,
+        x: 0,
+      },
+    }),
+    {
+      once: true,
+    },
+  );
+
   return (
     <div className="versusCoffee_header flex flex-col mx-auto justify-center w-full text-center py-4">
       <h2 className="playfair header1">{t("versusCoffeeHeader")}</h2>
@@ -166,6 +183,12 @@ const VersusCoffee = () => {
           </div>
         </Skeleton>
       </div>
+      <animated.img
+        ref={ref}
+        style={springs}
+        className="object-cover h-[15rem] absolute left-0 mt-[40rem]  block lg:hidden !z-10"
+        src="/images/animet.png"
+      />
     </div>
   );
 };

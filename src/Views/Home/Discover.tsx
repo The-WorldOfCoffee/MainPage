@@ -5,6 +5,7 @@ import { useCoffee } from "@/Contexts/CoffeesContext";
 import { useState, useEffect } from "react";
 import { Coffee } from "@/types";
 import { Skeleton } from "@chakra-ui/react";
+import { animated, useInView } from "@react-spring/web";
 
 export function Discover() {
   const { t } = useTranslation();
@@ -20,8 +21,25 @@ export function Discover() {
     }
   }, [coffeeList]);
 
+  const [ref, springs] = useInView(
+    () => ({
+      delay: 1000,
+      from: {
+        opacity: 0,
+        x: 300,
+      },
+      to: {
+        opacity: 1,
+        x: 0,
+      },
+    }),
+    {
+      once: true,
+    },
+  );
+
   return (
-    <section className="flex w-full mt-20 pt-40 gap-2 pb-20 md:flex-col lg:px-12 lg:py-16 sm:px-4 sm:mt-16 ph:mt-4 ph:py-8">
+    <section className="flex w-full mt-20 pt-40 gap-2 pb-32 md:flex-col lg:px-12 lg:py-16 sm:px-4 sm:mt-16 ph:mt-4 ph:py-8">
       <div className="flex flex-col flex-1 gap-2 md:w-full ">
         <h1 className="flex flex-col playfair header1">{t("discover_h1")}</h1>
         <article className="pt-4 headerSub playfair">{t("discover_sub")}</article>
@@ -38,6 +56,12 @@ export function Discover() {
           <Template title={""} describe={""} img=""></Template>
         )}
       </Skeleton>
+      <animated.img
+        ref={ref}
+        style={springs}
+        className="object-cover h-[15rem] mt-[18rem] absolute right-0 block lg:hidden !z-10"
+        src="/images/animet2.png"
+      />
     </section>
   );
 }
