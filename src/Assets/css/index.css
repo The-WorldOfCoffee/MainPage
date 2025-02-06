@@ -6,6 +6,12 @@
 @tailwind components;
 @tailwind utilities;
 
+.swiper-slide {
+  display: flex; /* Center content within the slide */
+  align-items: center; /* Vertically center */
+  justify-content: center; /* Horizontally center */
+  height: 100%; /* Make slides fill the container height */
+}
 a {
   padding: 0;
 }

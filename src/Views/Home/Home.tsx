@@ -7,6 +7,8 @@ import Footer from "@views/Footer/Footer";
 import AboutBeans from "./AboutBeans";
 import AdSection from "./Ad";
 
+import DevsTought from "./DevsTought";
+
 function Home() {
   return (
     <div className="flex flex-col">
@@ -21,6 +23,7 @@ function Home() {
         <VersusCoffee />
         <AdSection />
         <AboutBeans />
+        <DevsTought />
       </div>
       <Footer />
     </div>

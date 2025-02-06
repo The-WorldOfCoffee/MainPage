@@ -9,6 +9,8 @@ interface CoffeeBean {
 }
 
 const AboutCoffee = () => {
+  const BASE_URL = process.env.BASE_URL;
+
   const [coffeeData, setCoffeeData] = useState<CoffeeBean[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
@@ -17,7 +19,7 @@ const AboutCoffee = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch("/data/CoffeeBeansTypes.json");
+        const res = await fetch(`${BASE_URL}/coffeebeans`);
         if (!res.ok) {
           throw new Error("Network response was not ok");
         }
@@ -31,7 +33,7 @@ const AboutCoffee = () => {
     };
 
     fetchData();
-  }, []);
+  }, [BASE_URL]);
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % coffeeData.length);
